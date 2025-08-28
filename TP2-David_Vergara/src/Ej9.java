@@ -24,6 +24,8 @@ public class Ej9 {
         costoEnvio): Usa calcularCostoEnvio para sumar el costo del producto con el costo de envío. 
         Desde main(), solicita el peso del paquete, la zona de envío y el precio del producto. Luego, muestra el total a pagar. 
         */
+        System.out.println("\nEjercicio 9: Composición de funciones para calcular costo de envío y total de compra");
+
         Scanner input = new Scanner(System.in);
         System.out.print("Ingrese el precio del producto: $ ");
         double precioProducto = Double.parseDouble(input.nextLine());

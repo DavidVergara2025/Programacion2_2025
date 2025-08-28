@@ -21,10 +21,8 @@ public class Ej4 {
         */
         System.out.println("\nEjercicio 4:");
         Scanner input = new Scanner(System.in);
-
         System.out.print("Ingrese el precio del producto: ");
         double precio = Double.parseDouble(input.nextLine());
-
         System.out.print("Ingrese la categoria (A, B o C): ");
         //Convertir a minuscula (Se busca la funcion correspondiente .toLowerCase())
         String categoria = input.nextLine().toLowerCase();
@@ -40,17 +38,14 @@ public class Ej4 {
                 descuento = 0.20; // 20% de descuento
                 break;
             default:
-                System.out.println("Categoria invalida");
-                
+                System.out.println("Categoria invalida");               
         }
         double descuentoAplicado = precio * descuento;
         double precioFinal = precio - descuentoAplicado;
-
         System.out.println("Precio original: $" + precio);
         System.out.println("Descuento aplicado: $" + descuentoAplicado);
         System.out.println("Precio final: $" + precioFinal);
         System.out.println("Fin del ejercicio 4. Presione Enter para continuar...");
         input.nextLine();
-    }
-    
+    }   
 }

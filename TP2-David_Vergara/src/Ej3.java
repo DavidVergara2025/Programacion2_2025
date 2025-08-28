@@ -35,8 +35,5 @@ public class Ej3 {
         System.out.println("Usted es un " + clasificacion);
         System.out.println("Fin del ejercicio 3. Presione Enter para continuar...");
         input.nextLine();
-
     }
-    
-
 }
