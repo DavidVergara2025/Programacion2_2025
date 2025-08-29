@@ -17,7 +17,7 @@ public class TP3David_Vergara {
      */
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.println("\n============ Trabajo practico 3 - Programacion orientada a objetos ============");
+        System.out.println("\n============ Trabajo practico 3 - Programacion orientada a objetos ============ \nAlumno: David Vergara \nComision: 9");
         System.out.println("Elija una opcion:");
         System.out.println("1. Ejecutar todos los ejercicios secuencialmente");
         System.out.println("2. Elegir un ejercicio para ejecutar");
