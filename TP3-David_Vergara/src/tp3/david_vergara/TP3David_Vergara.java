@@ -35,12 +35,12 @@ public class TP3David_Vergara {
                 Ejercicio2.ej2();  
                 Ejercicio3.ej3();
                 Ejercicio4.ej4();
-                /*Ej5.ej5();*/                
+                Ejercicio5.ej5();              
                 break;
             case 2:
               //Opcion para elegir ejercicio. Al finalizar un ejercicio, pregunta si ejecutar otro
                 do {
-                    System.out.print("Ingrese el numero del ejercicio (1-5): ");
+                    System.out.print("\nIngrese el numero del ejercicio (1-5): ");
                     int numeroEjercicio = Integer.parseInt(input.nextLine());
                     switch (numeroEjercicio) {
                         case 1:
@@ -55,14 +55,14 @@ public class TP3David_Vergara {
                         case 4:
                             Ejercicio4.ej4();
                             break;
-                        /*case 5:
-                            Ej5.ej5();
-                            break;*/                        
+                        case 5:
+                            Ejercicio5.ej5();
+                            break;                     
                         default:
                             System.out.println("Numero de ejercicio invalido. Por favor, ingrese un numero entre 1 y 5.");
                             break;
                     }
-                    System.out.print("Desea ejecutar otro ejercicio? (s/n): ");
+                    System.out.print("\nDesea ejecutar otro ejercicio? (s/n): ");
                 } while (input.nextLine().equalsIgnoreCase("s"));
                 System.out.println("\nFin de los ejercicios.");
                 break;
