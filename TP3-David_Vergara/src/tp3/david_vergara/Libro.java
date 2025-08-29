@@ -42,7 +42,7 @@ public class Libro {
         Scanner input = new Scanner(System.in);
         int anio = Integer.parseInt(input.nextLine());
         while (anio < 1000 || anio > 2025 ) {
-            System.out.println("Año invalido. Ingrese un año entre 1450 y 2025: ");
+            System.out.println("Año invalido. Ingrese un año entre 1000 y 2025: ");
             anio = Integer.parseInt(input.nextLine());
         }
         this.anioPublicacion = anio;
