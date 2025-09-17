@@ -1,0 +1,24 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>0</x><y>60</y><w>300</w><h>210</h></coordinates><panel_attributes>Libro
+--
+- titulo : String
+- isbn : String
+- autor : Autor
+- editorial : Editorial
+--
++ Libro(titulo:String, isbn:String, editorial:Editorial)
++ setAutor(autor:Autor) : void
++ getEditorial() : Editorial
++ mostrar() : void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>410</x><y>60</y><w>270</w><h>150</h></coordinates><panel_attributes>Autor
+--
+- nombre : String
+- nacionalidad : String
+--
++ Autor(nombre:String, nacionalidad:String)
++ getNombre() : String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>10</x><y>430</y><w>260</w><h>140</h></coordinates><panel_attributes>Editorial
+--
+- nombre : String
+- direccion : String
+--
++ Editorial(nombre:String, direccion:String)
++ getNombre() : String</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>290</x><y>120</y><w>140</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+m1=1</panel_attributes><additional_attributes>120;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>90</x><y>260</y><w>30</w><h>190</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;170</additional_attributes></element></diagram>

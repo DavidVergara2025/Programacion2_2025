@@ -1,0 +1,31 @@
+<diagram program="umletino" version="15.1"><zoom_level>8</zoom_level><element><id>UMLClass</id><coordinates><x>48</x><y>64</y><w>392</w><h>176</h></coordinates><panel_attributes>Celular
+--
+- imei : String
+- marca : String
+- modelo : String
+- bateria : Bateria
+- usuario : Usuario
+--
++ Celular(imei:String, marca:String, modelo:String, bateria:Bateria, usuario:Usuario)
++ getImei() : String
++ getUsuario() : Usuario
++ setUsuario(usuario:Usuario) : void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>48</x><y>312</y><w>184</w><h>120</h></coordinates><panel_attributes>Usuario
+--
+- nombre : String
+- dni : String
+- celular : Celular
+--
++ Usuario(nombre:String, dni:String)
++ getNombre() : String
++ getCelular() : Celular
++ setCelular(celular:Celular) : void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>552</x><y>72</y><w>184</w><h>136</h></coordinates><panel_attributes>Bateria
+--
+- modelo : String
+- capacidad : int
+--
++ Bateria(modelo:String, capacidad:int)
++ getModelo() : String
++ getCapacidad() : int</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>128</x><y>232</y><w>32</w><h>96</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=1</panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>432</x><y>128</y><w>136</w><h>32</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2=1</panel_attributes><additional_attributes>10;10;150;10</additional_attributes></element></diagram>

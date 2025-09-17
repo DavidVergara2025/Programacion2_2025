@@ -1,0 +1,31 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>140</x><y>70</y><w>520</w><h>240</h></coordinates><panel_attributes>Computadora
+--
+- marca : String
+- numeroSerie : String
+- placaMadre : PlacaMadre
+- propietario : Propietario
+--
++ Computadora(marca:String, numeroSerie:String, modeloPlaca:String, chipsetPlaca:String)
++ setPropietario(propietario:Propietario) : void
++ getMarca() : String
++ getPropietario() : Propietario
++ mostrarInfo() : void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>230</x><y>440</y><w>330</w><h>200</h></coordinates><panel_attributes>Propietario
+--
+- nombre : String
+- dni : String
+- computadora : Computadora
+--
++ Propietario(nombre:String, dni:String)
++ setComputadora(computadora:Computadora) : void
++ getNombre() : String
++ getComputadora() : Computadora</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>840</x><y>110</y><w>270</w><h>160</h></coordinates><panel_attributes>PlacaMadre
+--
+- modelo : String
+- chipset : String
+--
++ PlacaMadre(modelo:String, chipset:String)
++ getModelo() : String</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>650</x><y>170</y><w>210</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m2=1</panel_attributes><additional_attributes>10;10;190;10</additional_attributes></element><element><id>Relation</id><coordinates><x>360</x><y>300</y><w>40</w><h>160</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=1
+</panel_attributes><additional_attributes>10;10;10;140</additional_attributes></element></diagram>
