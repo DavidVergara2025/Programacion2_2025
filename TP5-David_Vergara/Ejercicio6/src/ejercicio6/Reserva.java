@@ -9,13 +9,7 @@ package ejercicio6;
  * @author david
  */
 public class Reserva {
-    /*Reserva - Cliente - Mesa
-a. Asociación unidireccional: Reserva → Cliente
-b. Agregación: Reserva → Mesa
-Clases y atributos:
-i. Reserva: fecha, hora
-ii. Cliente: nombre, telefono
-iii. Mesa: numero, capacidad */
+    
     private String fecha;
     private String hora;
     private Cliente cliente; // Asociación unidireccional
