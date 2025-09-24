@@ -1,0 +1,27 @@
+<diagram program="umletino" version="15.1"><zoom_level>7</zoom_level><element><id>UMLClass</id><coordinates><x>0</x><y>147</y><w>266</w><h>126</h></coordinates><panel_attributes>CitaMedica
+--
+- fecha : String
+- hora : String
+- paciente : Paciente
+- profesional : Profesional
+--
++ CitaMedica(fecha:String, hora:String)
++ setPaciente(paciente:Paciente) : void
++ setProfesional(profesional:Profesional) : void
++ mostrarDetalles() : void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>7</x><y>336</y><w>259</w><h>119</h></coordinates><panel_attributes>Paciente
+--
+- nombre : String
+- obraSocial : String
+--
++ Paciente(nombre:String, obraSocial:String)
++ getNombre() : String
++ getObraSocial() : String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>364</x><y>161</y><w>210</w><h>91</h></coordinates><panel_attributes>Profesional
+--
+- nombre : String
+- especialidad : String
+--
++ Profesional(nombre:String, especialidad:String)
++ getNombre() : String
++ getEspecialidad() : String</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>129</x><y>266</y><w>28</w><h>84</h></coordinates><panel_attributes>lt=-&gt;
+m2=1</panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>259</x><y>196</y><w>119</w><h>28</h></coordinates><panel_attributes>lt=-&gt;
+m2=1</panel_attributes><additional_attributes>10;10;150;10</additional_attributes></element></diagram>
