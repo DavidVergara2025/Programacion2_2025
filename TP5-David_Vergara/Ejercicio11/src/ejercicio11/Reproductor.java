@@ -9,5 +9,7 @@ package ejercicio11;
  * @author david
  */
 public class Reproductor {
-    
+       public void reproducir(Cancion cancion) {
+        System.out.println("\nReproduciendo: " + cancion.getNombre() + " - Artista: " + cancion.getArtista().getNombre());
+    }
 }

@@ -9,5 +9,14 @@ package ejercicio12;
  * @author david
  */
 public class Calculadora {
-    
+    /*Impuesto - Contribuyente - Calculadora
+a. Asociación unidireccional: Impuesto → Contribuyente
+b. Dependencia de uso: Calculadora.calcular(Impuesto)
+Clases y atributos:
+i. Impuesto: monto.
+ii. Contribuyente: nombre, cuil.
+iii. Calculadora->método: void calcular(Impuesto impuesto)*/
+    public void calcular(Impuesto impuesto){
+        System.out.println("\nCalculando impuesto de monto: " + impuesto.getMonto() + " para el contribuyente: " + impuesto.getContribuyente().getNombre());
+    }
 }

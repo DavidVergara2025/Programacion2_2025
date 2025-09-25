@@ -14,7 +14,18 @@ public class Ejercicio12 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        /*Impuesto - Contribuyente - Calculadora
+a. Asociación unidireccional: Impuesto → Contribuyente
+b. Dependencia de uso: Calculadora.calcular(Impuesto)
+Clases y atributos:
+i. Impuesto: monto.
+ii. Contribuyente: nombre, cuil.
+iii. Calculadora->método: void calcular(Impuesto impuesto)*/
+        Contribuyente contribuyente = new Contribuyente("Fernado Fernandez", "20-12345678-9");
+        Impuesto impuesto = new Impuesto(27000.50);
+        impuesto.setContribuyente(contribuyente);
+        Calculadora calculadora = new Calculadora();
+        calculadora.calcular(impuesto);
     }
     
 }
