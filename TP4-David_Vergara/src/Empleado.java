@@ -74,6 +74,19 @@ public class Empleado {
         this.salario = salario;       
     }
 
+    //Incrementar salario por porcentaje
+    public void incrementarSalario() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Ingrese el porcentaje de incremento salarial (por ejemplo, 10 para un 10%): ");
+        double porcentaje = Double.parseDouble(input.nextLine());
+        if (porcentaje > 0) {
+            double incremento = this.salario * (porcentaje / 100);
+            this.salario += incremento;
+            System.out.println("Salario incrementado en " + porcentaje + "%. Nuevo salario: " + this.salario);
+        } else {
+            System.out.println("Porcentaje invalido. El salario no se ha modificado.");
+        }
+    } 
 
     public void mostrarInfo() {
         getId();

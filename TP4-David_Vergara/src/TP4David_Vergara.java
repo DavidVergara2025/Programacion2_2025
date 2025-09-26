@@ -16,29 +16,53 @@ public class TP4David_Vergara {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        System.out.println("=========================== TRABAJO PRACTICO 4: Programación Orientada a Objetos II ==========================="
-            + "\nAlumno: David Vergara \n"
-            + "====================================================================================="
-            + "Sistema de Gestión de Empleados"
-            + "\nSecuencia del programa:"
-            + "\n1. Crear empleado"
-            + "\n2. Mostrar empleado"
-            + "\n3. Actualizar salario"
-            + "\n4. Mostrar total de empleados"
-            + "\n5. Fin del programa");
+        boolean salir = false;
+        java.util.ArrayList<Empleado> empleados = new java.util.ArrayList<>();
+         System.out.println("\n=========================== TRABAJO PRACTICO 4: Programación Orientada a Objetos II ==========================="
+                + "\nAlumno: David Vergara \n"
+                + "==============================================================================================================="
+                + "\nSistema de Gestión de Empleados");
+        while (!salir) {
+            System.out.println("\nOpciones:"
+                + "\n1. Crear empleado"
+                + "\n2. Mostrar empleado por ID"
+                + "\n3. Actualizar salario"
+                + "\n4. Mostrar total de empleados"
+                + "\n5. Mostrar todos los empleados"
+                + "\n6. Fin del programa");
       
-        
-            Empleado emp = Funciones.crearEmpleado();
-            Funciones.mostrarEmpleado(emp); 
-            System.out.println("Ingrese el nuevo salario del empleado: ");
-            Scanner input = new Scanner(System.in);
-            double nuevoSalario = Double.parseDouble(input.nextLine());
-            emp.actualizarSalario(nuevoSalario);
-            System.out.println("Salario actualizado: " + emp);
-            System.out.println("Total de empleados en el sistema: " + Empleado.mostrarTotalEmpleados());
-            System.out.println("Fin del programa.");
-
-        
+            System.out.println("Ingrese la opción deseada (1-5): ");
+            Scanner scanner = new Scanner(System.in);
+            int opcion = Integer.parseInt(scanner.nextLine());
+            switch (opcion) {
+                case 1:
+                    Empleado nuevo = Funciones.crearEmpleado();
+                    empleados.add(nuevo);
+                    System.out.println("Empleado creado: " + nuevo);
+                    break;
+                case 2:
+                    Funciones.buscarEmpleadoPorId(empleados);
+                    break;
+                case 3:                    
+                    Funciones.actualizarSalario(empleados);
+                    break;
+                case 4:
+                    System.out.println("Total de empleados: " + Empleado.mostrarTotalEmpleados());
+                    break;
+                case 5:
+                    for (Empleado emp : empleados) {
+                        Funciones.mostrarEmpleado(emp);
+                    }                    
+                    break;
+                case 6:
+                    salir = true;
+                    System.out.println("Fin del programa. ¡Hasta luego!");
+                    break;
+                default:
+                    System.out.println("Opción inválida. Intente nuevamente.");
+                    break;
+            }
+            Funciones.continuar();        
+        }        
     }
-    
 }

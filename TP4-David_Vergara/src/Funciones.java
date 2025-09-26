@@ -39,5 +39,58 @@ public class Funciones {
     public static void mostrarEmpleado(Empleado emp) {
         System.out.println(emp);
     }
+    //Buscar empleado por ID
+    public static void buscarEmpleadoPorId(java.util.ArrayList<Empleado> empleados) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Ingrese el ID del empleado a buscar: ");
+        int idBuscar = Integer.parseInt(input.nextLine());
+        for (Empleado emp : empleados) {
+            if (emp.getId() == idBuscar) {
+                mostrarEmpleado(emp);
+                return;
+            }
+        }
+        System.out.println("Empleado con ID " + idBuscar + " no encontrado.");
+    }
+    //Actualizar salario
+    public static void actualizarSalario(java.util.ArrayList<Empleado> empleados) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Ingrese el ID del empleado cuyo salario desea actualizar: ");
+        int idBuscar = Integer.parseInt(input.nextLine());
+        for (Empleado emp : empleados) {
+            if (emp.getId() == idBuscar) {
+                mostrarEmpleado(emp); 
+                System.out.println("Desea actualizar por monto fijo (1) o porcentaje (2)? Ingrese 1 o 2: ");
+                int opcion = Integer.parseInt(input.nextLine());
+                switch (opcion) {
+                    case 1:
+                        System.out.println("Ingrese el nuevo salario: ");
+                        double nuevoSalario = Double.parseDouble(input.nextLine());
+                        emp.actualizarSalario(nuevoSalario);
+                        System.out.println("Salario actualizado.");
+                        mostrarEmpleado(emp);
+                        return;
+                    case 2:
+                        emp.incrementarSalario();
+                        System.out.println("Salario actualizado.");
+                        mostrarEmpleado(emp);
+                        return;
+                    default:
+                        System.out.println("Opción inválida. No se realizaron cambios.");
+                        return;
+                }
+                
+            }
+        }
+        System.out.println("Empleado con ID " + idBuscar + " no encontrado.");
+    }
+
+    
+    //Funcion para presionar tecla y continuar
+    public static void continuar() {
+        System.out.println("Presione cualquier tecla para continuar...");
+        Scanner scanner = new Scanner(System.in);
+        scanner.nextLine();
+    }
     
 }
