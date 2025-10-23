@@ -9,20 +9,7 @@ package tp6;
  * @author david
  */
 public class Producto {
-    /*Clase Producto
-Atributos:
-● id (String) → Identificador único del producto.
-● nombre (String) → Nombre del producto.
-● precio (double) → Precio del producto.
-● cantidad (int) → Cantidad en stock.
-● categoria (CategoriaProducto) → Categoría del producto.
-Métodos:
-● mostrarInfo() → Muestra en consola la información del producto.
-Enum CategoriaProducto Valores:
-● ALIMENTOS
-● ELECTRONICA
-● ROPA
-● HOGAR */
+    
     private String id;
     private String nombre;
     private double precio;
