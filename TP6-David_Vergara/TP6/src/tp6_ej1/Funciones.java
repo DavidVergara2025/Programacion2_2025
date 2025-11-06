@@ -1,4 +1,4 @@
-package tp6;
+package tp6_ej1;
 
 import java.util.ArrayList;
 import java.util.Scanner;
